@@ -1,0 +1,41 @@
+body {
+    background-color: #161e39c6;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 70px;
+    text-shadow: rgba(255, 0, 0, 0.335) 10px 10px 10px;
+}
+
+.buttons {
+    width: 640px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+button {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black;
+    cursor: pointer;
+    box-shadow: rgba(255, 0, 0, 0.335) 10px 10px 10px;
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 640px;
+    width: 640px;
+    background-color: white;
+    box-shadow: rgba(255, 0, 0, 0.353) 10px 13px 18px;
+}
