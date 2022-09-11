@@ -5,7 +5,7 @@ const rainbow = document.querySelector('.rainbowBtn')
 const black = document.querySelector('.blackBtn')
 const erase = document.querySelector('.eraserBtn')
 const clean = document.querySelector('.cleanBtn')
-const click = document.querySelector('.clickBtn')
+
 
 let size = 20
 
@@ -22,16 +22,15 @@ divSize.addEventListener('click', () => {
 function newGrid(size) {
     for (let i = 0; i < size * size; i++) {
         const div = document.createElement('div')
-       
+        div.classList.add('cell')
         div.style.height = `${640 / size}px`
         div.style.width = `${640 / size}px`
         grid.appendChild(div)
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = 'black'
         })
-
     }
-
+    
 }
 newGrid(size)
 
@@ -57,7 +56,6 @@ rainbow.addEventListener('click', () => {
 
 })
 
-
 black.addEventListener('click', () => {
     let cell = document.querySelectorAll('.grid>div')
     cell.forEach((div) => {
@@ -68,7 +66,6 @@ black.addEventListener('click', () => {
     })
 
 })
-
 
 erase.addEventListener('click', () => {
     let cell = document.querySelectorAll('.grid>div')
@@ -81,7 +78,6 @@ erase.addEventListener('click', () => {
     })
 
 })
-
 
 clean.addEventListener('click', () => {
     let cell = document.querySelectorAll('.grid>div')
